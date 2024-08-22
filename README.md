@@ -5,8 +5,8 @@ This is a demo project built with Laravel. The project includes basic user authe
 
 ## Installation and Setup 
 
-** This project is build in laravel version 11 so  
-  make sure you have the compatible version(atleast php version 8.1 required) **
+**This project is build in laravel version 11 so  
+  make sure you have the compatible version(atleast php version 8.1 required)**
 
   1. Install the zip file and extract it.
   2. After install open xampp, turn on mysql,apache servers and go to the php myadmin.

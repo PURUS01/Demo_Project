@@ -15,6 +15,9 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->string('title',25);
+            $table->date('start_date');
+            $table->date('end_date');
+            $table->enum('status', ['not-started', 'in-progress', 'finished'])->default('not-started');
             $table->string('description',255);
             $table->timestamps();
         });

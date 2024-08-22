@@ -30,9 +30,28 @@
         <input type="text" class="form-control" id="description" name="description" placeholder="Enter task description">
     </div>
     @if ($errors->has('description'))
-    <div class="text-danger">{{$errors->first('description')}}</div>
-        
+    <div class="text-danger">{{$errors->first('description')}}</div>     
     @endif
+
+    <div class="form-group mt-3">
+        <div class="row">
+            <div class="col-5">
+                <label for="date">Start Date</label>
+        <input type="date" class="form-control" id="start_date" name="start_date" >
+            </div>
+            @if ($errors->has('start_date'))
+    <div class="text-danger">{{$errors->first('start_date')}}</div>     
+    @endif
+            <div class="col-5">
+                <label for="date">End Date</label>
+        <input type="date" class="form-control" id="end_date" name="end_date" >
+            </div>
+            @if ($errors->has('end_date'))
+    <div class="text-danger">{{$errors->first('end_date')}}</div>     
+    @endif
+        </div>      
+    </div>
+    
 
     <!-- Submit Button -->
     <button type="submit" class="btn btn-primary mt-3">Submit</button>

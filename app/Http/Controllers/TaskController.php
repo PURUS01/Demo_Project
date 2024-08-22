@@ -38,7 +38,10 @@ class TaskController extends Controller
     {
         $request->validate([
             'title'=>'required',
-            'description'=>'required'
+            'description'=>'required',
+            'start_date'=>'required',
+            'end_date'=>'required',
+            
         ],
         [
             'title.required'=>'You have to fill title field',
@@ -51,7 +54,9 @@ class TaskController extends Controller
         $task->user_id=Auth::user()->id;
         $task->title=$request->input('title');
         $task->description=$request->input('description');
-
+        $task->start_date=$request->input('start_date');
+        $task->end_date=$request->input('end_date');
+        
         $save=$task->save();
         
         $event=event(new popupMessage($request->input('title'),'Task Created Successfully'));
@@ -93,7 +98,10 @@ class TaskController extends Controller
     {
         $request->validate([
             'title'=>'required',
-            'description'=>'required'
+            'description'=>'required',
+            'start_date'=>'required',
+            'end_date'=>'required',
+            'status'=>'required'
         ],
         [
             'title.required'=>'You have to fill title field',
