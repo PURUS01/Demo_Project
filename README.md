@@ -2,6 +2,9 @@
 
 This is a demo project built with Laravel. The project includes basic user authentication features such as registration, login, and logout. After logging in, users can access an interface to add tasks, view them, edit, and delete tasks.
 
+**Packages & Starter_kits**
+ *Breeze - Used for Authentication
+ *Pusher - Used to generate notifications
 
 ## Installation and Setup 
 
